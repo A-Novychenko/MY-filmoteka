@@ -1,0 +1,54 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ol,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--primary-text-font);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-black-text);
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--transition-dur-and-func);
+}
+
+.list {
+  list-style: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
