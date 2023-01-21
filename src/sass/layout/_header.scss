@@ -1,0 +1,128 @@
+.header {
+  padding-top: 40px;
+  padding-bottom: 44px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56),
+      rgba(0, 0, 0, 0.56)
+    ),
+    url(../images/background-with-red-lines-mob-main.jpg);
+
+  background-color: var(--dark-text-color);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo__name {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-block;
+    margin-left: 8px;
+
+    font-size: 30px;
+    line-height: 1.17;
+
+    color: #ffffff;
+  }
+}
+
+.logo__img {
+  width: 24px;
+  height: 24px;
+  background-color: orange;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav {
+  display: flex;
+  column-gap: 40px;
+}
+
+.header__link {
+  color: #ffffff;
+  font-family: 'Roboto';
+  line-height: 1.17;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header__form {
+  position: relative;
+
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 54px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 280px;
+  height: 20px;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+}
+
+.header__input {
+  width: 280px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.5px solid var(--light-text-color);
+  color: var(--light-text-color);
+  outline: none;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.15px;
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
+}
+
+.header__input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.15px;
+
+  color: var(--light-text-color);
+}
+
+.header__btn {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+
+  border: none;
+
+  width: 12px;
+  height: 12px;
+
+  background-color: #ff001b;
+}
+
+.header__error {
+  margin-top: 16px;
+
+  width: 280px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.15;
+  color: #ff001b;
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+    text-align: center;
+  }
+}
