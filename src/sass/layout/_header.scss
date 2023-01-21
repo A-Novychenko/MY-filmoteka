@@ -77,6 +77,9 @@
 }
 
 .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -98,8 +101,11 @@
 }
 
 .logo__img {
+  display: block;
   width: 24px;
   height: 24px;
+
+  line-height: 0;
 
   fill: var(--light-text-color);
 }
@@ -109,6 +115,10 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 54px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
 }
 
 .header__nav {
@@ -118,6 +128,8 @@
 
 .header__link {
   position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   color: #ffffff;
   font-family: 'Roboto';
@@ -140,16 +152,16 @@
 .header__form {
   position: relative;
 
-  margin-right: auto;
-  margin-left: auto;
-  // margin-top: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
 
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 16px;
+
   max-width: 280px;
   width: 100%;
-  // height: 20px;
 
   @media screen and (min-width: 320px) {
     width: 280px;
@@ -168,8 +180,6 @@
 }
 
 .header__input {
-  margin-bottom: 16px;
-
   max-width: 280px;
   width: 100%;
   height: 20px;
@@ -224,7 +234,6 @@
 }
 
 .header__error {
-  // margin-top: 16px;
   margin-right: auto;
   margin-left: auto;
 
@@ -266,7 +275,17 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    column-gap: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    column-gap: 16px;
+  }
 }
+
 .header_btn {
   width: 100%;
   max-width: 130px;
@@ -283,5 +302,21 @@
 
   @media screen and (min-width: 1280px) {
     width: 147px;
+  }
+}
+
+.headerLib {
+  padding-bottom: 62px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 60px;
+  }
+}
+
+.headerLib__wrap {
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
   }
 }
