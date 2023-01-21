@@ -73,7 +73,6 @@
       ),
       url('../images/header-bg-desctop@2x.jpg');
   }
-  //
 }
 
 .logo {
@@ -141,7 +140,7 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: 0px;
 
   display: inline-block;
   width: 100%;
@@ -271,10 +270,89 @@
   pointer-events: none;
 }
 
+///header_library
+
+.header_library {
+  padding-bottom: 62px;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.56),
+      rgba(0, 0, 0, 0.56)
+    ),
+    url('../images/hedLib-mob.jpg');
+}
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .header_library {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/hedLib-mob@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header_library {
+    padding-bottom: 60px;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/hedLib-tab.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .header_library {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/hedLib-tab@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header_library {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/hedLib-desk.jpg');
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1280px),
+  screen and (min-resolution: 192dpi) and (min-width: 1280px),
+  screen and (min-resolution: 2dppx) and (min-width: 1280px) {
+  .header_library {
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)
+      ),
+      url('../images/hedLib-desk@2x.jpg');
+  }
+}
+
 .header__btns {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 10px;
+
+  @media screen and (min-width: 310px) {
+    justify-content: space-between;
+  }
 
   @media screen and (min-width: 768px) {
     justify-content: center;
@@ -286,7 +364,7 @@
   }
 }
 
-.header_btn {
+.header__btn {
   width: 100%;
   max-width: 130px;
 
@@ -294,6 +372,7 @@
   @media screen and (min-width: 320px) {
     width: 130px;
     max-width: 100%;
+    height: 42px;
   }
 
   @media screen and (min-width: 768px) {
@@ -305,15 +384,7 @@
   }
 }
 
-.headerLib {
-  padding-bottom: 62px;
-
-  @media screen and (min-width: 768px) {
-    padding-bottom: 60px;
-  }
-}
-
-.headerLib__wrap {
+.header__wrap_library {
   margin-bottom: 60px;
 
   @media screen and (min-width: 768px) {
