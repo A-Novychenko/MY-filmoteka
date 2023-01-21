@@ -92,7 +92,7 @@
 
     color: #ffffff;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     margin-left: 10px;
   }
 }
@@ -108,6 +108,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 54px;
 }
 
 .header__nav {
@@ -141,14 +142,14 @@
 
   margin-right: auto;
   margin-left: auto;
-  margin-top: 54px;
+  // margin-top: 54px;
   display: flex;
   justify-content: center;
   align-items: center;
 
   max-width: 280px;
   width: 100%;
-  height: 20px;
+  // height: 20px;
 
   @media screen and (min-width: 320px) {
     width: 280px;
@@ -167,6 +168,8 @@
 }
 
 .header__input {
+  margin-bottom: 16px;
+
   max-width: 280px;
   width: 100%;
   height: 20px;
@@ -188,7 +191,7 @@
   @media screen and (min-width: 768px) {
     width: 336px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1280px) {
     width: 394px;
   }
 }
@@ -201,9 +204,9 @@
   color: var(--light-text-color);
 }
 
-.header__btn {
+.header__search {
   position: absolute;
-  bottom: 6px;
+  top: 2px;
   right: 0;
 
   border: none;
@@ -213,7 +216,7 @@
   cursor: pointer;
 }
 
-.header__search {
+.header__search-icon {
   width: 12px;
   height: 12px;
 
@@ -221,7 +224,9 @@
 }
 
 .header__error {
-  margin-top: 16px;
+  // margin-top: 16px;
+  margin-right: auto;
+  margin-left: auto;
 
   max-width: 280px;
   width: 100%;
@@ -231,6 +236,14 @@
   line-height: 1.15;
   color: #ff001b;
 
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: visible;
+
+  transition: transform var(--animation), visibility var(--animation),
+    opacity var(--animation);
+
   @media screen and (min-width: 320px) {
     width: 280px;
     max-width: 100%;
@@ -238,11 +251,37 @@
 
   @media screen and (min-width: 768px) {
     margin-top: 20px;
-    width: 336px;
+    width: 393px;
+  }
+}
+
+.header__error_hidden {
+  transform: scale(1.2);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.header__btns {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header_btn {
+  width: 100%;
+  max-width: 130px;
+
+  height: 44px;
+  @media screen and (min-width: 320px) {
+    width: 130px;
+    max-width: 100%;
   }
 
   @media screen and (min-width: 768px) {
-    width: 100%;
-    text-align: center;
+    width: 152px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 147px;
   }
 }
