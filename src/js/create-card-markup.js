@@ -1,16 +1,17 @@
 import { createGenresMarkup } from './createGenresMarkup';
 
 export function createCardMarkup(date, images, genres) {
-  const { base_url, poster_sizes } = images;
+  console.log(images);
+  const { secure_base_url, poster_sizes } = images;
 
   const destopSize = poster_sizes.includes('w780') ? 'w780' : 'original';
   const tabletSize = poster_sizes.includes('w500') ? 'w500' : 'original';
   const mobileSize = poster_sizes.includes('w342') ? 'w342' : 'original';
 
-  const descktopBaseUrl = base_url + destopSize;
-  const tabletBaseUrl = base_url + destopSize;
-  const mobileBaseUrl = base_url + destopSize;
-  const originalBaseUrl = base_url + 'original';
+  const descktopBaseUrl = secure_base_url + destopSize;
+  const tabletBaseUrl = secure_base_url + destopSize;
+  const mobileBaseUrl = secure_base_url + destopSize;
+  const originalBaseUrl = secure_base_url + 'original';
 
   return date.reduce(
     (acc, { title, poster_path, vote_average, release_date, genre_ids }) => {
