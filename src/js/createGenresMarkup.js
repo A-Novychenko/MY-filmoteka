@@ -1,12 +1,4 @@
 export function createGenresMarkup(genres, genre_ids) {
-  // const genresName = [];
-  // genres.map(genre =>
-  //   genre_ids.map(el => {
-  //     if (el === genre.id) {
-  //       genresName.push(genre.name);
-  //     }
-  //   })
-  // );
   const genresName = [];
   genres.map(genre =>
     genre_ids.filter(el => {
@@ -15,11 +7,10 @@ export function createGenresMarkup(genres, genre_ids) {
       }
     })
   );
-  //first and second
 
   let mar = [];
   if (!genresName.length) {
-    return 'NOT genres';
+    return;
   }
 
   if (genresName.length === 1) {
@@ -32,18 +23,46 @@ export function createGenresMarkup(genres, genre_ids) {
   }
 
   if (genresName.length > 3) {
-    mar.push(`<a href="#" class="card__link">Other</a>`);
-    return mar.map(el => `<a href="#" class="card__link">${el}</a>`).join(' ');
+    return (
+      mar.map(el => `<span class="card__genre">${el}</span>`).join(', ') +
+      `, ` +
+      `<a class="card__genre card__genre_link">Other</a>`
+    );
   }
 
   const genresNameMurkup = mar
-    .map(el => `<a href="#" class="card__link">${el}</a>`)
-    .join(' ');
-
-  //all genres
-  // const genresNameMurkup = genresName
-  //   .map(el => `<a href="">${el}</a>`)
-  //   .join('');
+    .map(el => `<span class="card__genre">${el}</span>`)
+    .join(', ');
 
   return genresNameMurkup;
 }
+
+// export function createGenresMarkup(genre_ids, genres) {
+//   return genre_ids.map(result => {
+//     const arrayOfGenresName = result.genre_ids.map(
+//       id => genres.find(genre => genre.id === id).name
+//     );
+//     return {
+//       ...result,
+//       allGenres: arrayOfGenresName.join(', '),
+//       previewGenres: `${arrayOfGenresName.slice(0, 2).join(', ')}${
+//         arrayOfGenresName.length > 2 ? `, ...` : ''
+//       }`,
+//     };
+//   });
+// }
+
+// export function getFilteredMovies(arr, genres) {
+//   return arr.map(result => {
+//     const arrayOfGenresName = result.genre_ids.map(
+//       id => genres.find(genre => genre.id === id).name
+//     );
+//     return {
+//       ...result,
+//       allGenres: arrayOfGenresName.join(', '),
+//       previewGenres: `${arrayOfGenresName.slice(0, 2).join(', ')}${
+//         arrayOfGenresName.length > 2 ? `, ...` : ''
+//       }`,
+//     };
+//   });
+// }
