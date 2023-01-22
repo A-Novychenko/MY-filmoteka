@@ -44,9 +44,11 @@ export function createCardMarkup(date, images, genres) {
                 </div>
                 <div class="card__info">
                     <h2 class="card__title">${title}</h2>
-                    <p class="card__genries">${genresNameMurkup}</p>
-                    <p class="card__date">${release_date}</p>
-                    <p class="card__rating">${vote_average}</p>
+                    <div class="card__inner">
+                        <p class="card__genres">${genresNameMurkup}</p>
+                        <p class="card__date">${release_date}</p>
+                        <p class="card__rating">${vote_average}</p>
+                    </div>
                 </div>
             </a>
         </li>`
