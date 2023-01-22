@@ -1,7 +1,15 @@
 export function createGenresMarkup(genres, genre_ids) {
+  // const genresName = [];
+  // genres.map(genre =>
+  //   genre_ids.map(el => {
+  //     if (el === genre.id) {
+  //       genresName.push(genre.name);
+  //     }
+  //   })
+  // );
   const genresName = [];
   genres.map(genre =>
-    genre_ids.map(el => {
+    genre_ids.filter(el => {
       if (el === genre.id) {
         genresName.push(genre.name);
       }
@@ -22,13 +30,14 @@ export function createGenresMarkup(genres, genre_ids) {
     mar.push(genresName[0]);
     mar.push(genresName[1]);
   }
+
   if (genresName.length > 3) {
-    mar.push(`<a href="">Other</a>`);
-    return mar.map(el => `<a href="">${el}</a><span>,</span>`).join(' ');
+    mar.push(`<a href="#" class="card__link">Other</a>`);
+    return mar.map(el => `<a href="#" class="card__link">${el}</a>`).join(' ');
   }
 
   const genresNameMurkup = mar
-    .map(el => `<a href="">${el}</a><span>,</span>`)
+    .map(el => `<a href="#" class="card__link">${el}</a>`)
     .join(' ');
 
   //all genres
