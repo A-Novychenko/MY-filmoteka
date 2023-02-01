@@ -1,1 +1,2 @@
-![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/d%3A/project/test%20-%20filmoteka-team-project%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/src/images/readm1.jpg?version%3D1675279661963)![Alt text](https://file%2B.vscode-resource.vscode-cdn.net/d%3A/project/test%20-%20filmoteka-team-project%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F/src/images/readm2.jpg?version%3D1675279748566)
+![GitHub actions settings](./src/images/readm1.jpg)
+![GitHub actions settings](./src/images/readm2.jpg)
